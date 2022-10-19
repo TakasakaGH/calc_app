@@ -12,17 +12,17 @@ class MessageController extends Controller
         if ($variable == 'addition') {
             $result = $num1 + $num2;
 
-        } elsif ($variable == 'subtraction') {
+        } elseif ($variable == 'subtraction') {
             $result = $num1 - $num2;
 
-        } elsif ($variable == 'multiplication') {
+        } elseif ($variable == 'multiplication') {
             $result = $num1 * $num2;
 
-        } elsif ($variable == 'division') {
+        } elseif ($variable == 'division') {
             $result = $num1 / $num2;
         }
         
-        return view('message.calcs', ['msg' => $msg]);
+        return view('message.calcs', ['answer' => $variable]);
         
     }
 
